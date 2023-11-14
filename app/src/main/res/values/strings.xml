@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeekThreeSectionTwo</string>
+    <string name="teamname">Team:%s </string>
+    <string name="increment_score">+1</string>
 </resources>
