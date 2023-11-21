@@ -23,16 +23,18 @@ class ScoreBoardViewModel(): ViewModel() {
         get()=_scoreCard.asStateFlow()
 
     fun updateScoreTable(isTeamA: Boolean){
+        val scoreA=_scoreCard.value.teamAscore
+        val scoreB=_scoreCard.value.teamBscore
         _scoreCard.update{
 
             card ->
             if(isTeamA)
             card.copy(
-            teamAscore = card.teamAscore++
+            teamAscore = scoreA+1
             )
             else
                 card.copy(
-                    teamBscore = card.teamBscore++
+                    teamBscore = scoreB+1
                 )
 
         }
