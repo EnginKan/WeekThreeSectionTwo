@@ -45,7 +45,7 @@ navController: NavController){
     modifier = Modifier
         .fillMaxWidth()
         .clickable {
-            navController.navigate("${Routes.route2}/${book.id}")
+            navController.navigate("${Routes.route2}?bookid=${book.id}")
         }) {
         Text(text = "${book.title}",
         style = MaterialTheme.typography.bodyLarge)
@@ -100,13 +100,13 @@ fun BookScreen(){
         composable(route = Routes.route1){
             BookListScreen(model = model, navController =controller )
         }
-        composable(route="${Routes.route2}/{bookid}",
-        arguments = listOf(navArgument("bookid"){type= NavType.IntType})
+        composable(route="${Routes.route2}?bookid={bookid}",
+        arguments = listOf(navArgument("bookid"){ defaultValue= 5})
         ){
             stack->
-            val bookid= stack.arguments?.getInt("bookid",0)
+            val bookid= stack.arguments?.getString("bookid")
             if (bookid != null) {
-                BookDetail(model = model, id = bookid, navController = controller )
+                BookDetail(model = model, id = bookid.toInt(), navController = controller )
             }
         }
 

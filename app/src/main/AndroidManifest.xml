@@ -23,6 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity"
+            android:theme="@style/Theme.WeekThreeSectionTwo">
+
+        </activity>
     </application>
+    <queries>
+        <intent >
+            <action android:name="android.intent.action.SEND"></action>
+            <data android:mimeType="text/plain"></data>
+        </intent>
+    </queries>
 
 </manifest>
