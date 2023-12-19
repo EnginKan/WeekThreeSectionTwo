@@ -10,6 +10,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
+import com.yeditepe.weekthreesectiontwo.loginbuttonfigma.LoginButtonFigma
 import com.yeditepe.weekthreesectiontwo.ui.theme.WeekThreeSectionTwoTheme
 
 class SecondActivity :ComponentActivity() {
@@ -27,6 +28,7 @@ class SecondActivity :ComponentActivity() {
                     }) {
                         Text(text = "Go to Main Activity")
                     }
+                    LoginButtonFigma(onPressed = {})
 
                 }
             }
