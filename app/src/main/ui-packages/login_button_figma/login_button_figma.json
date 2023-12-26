@@ -1,0 +1,114 @@
+{
+  "name": "login_button_figma",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "2hgmo3YLfn8yEwhMx9JGlk",
+    "node": "1:5",
+    "version": "4794102538",
+    "component-id": "d668d99a4bcff2634f87be3886286bcf6d0f2f63"
+  },
+  "default": "LoginButtonFigma",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "LoginButton"
+      },
+      {
+        "type": "text",
+        "id": "LogInText"
+      }
+    ],
+    "modes": {
+      "LoginButtonFigma": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "LoginButton",
+              "LogInText"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "LoginButton",
+            "border-radius": "30.0",
+            "tap-handler": "$onPressed",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "login_button.svg"
+          },
+          {
+            "id": "LogInText",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "47.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "17.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "163.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "24.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.019920318725099532",
+              "value": "0.984313725490196"
+            },
+            "text-content": "Log In",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "20.0",
+            "line-height": "1.2102272033691406",
+            "typeface": "Inter"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "onPressed": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "LoginButtonFigma",
+      "size": {
+        "width": 244.0,
+        "height": 68.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
